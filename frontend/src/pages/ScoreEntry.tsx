@@ -37,7 +37,6 @@ export default function ScoreEntry() {
     const [notes, setNotes] = useState('')
     const [isSaving, setIsSaving] = useState(false)
     const [saveError, setSaveError] = useState<string | null>(null)
-    const [savedMessage, setSavedMessage] = useState('')
 
     const totalScore = holes.reduce((s, h) => s + h.score, 0)
     const totalPar = holes.reduce((s, h) => s + h.par, 0)
@@ -168,7 +167,6 @@ export default function ScoreEntry() {
                         />
 
                         <button
-                            disabled={!selectedCourse}
                             onClick={chooseCourse}
                             className="w-full py-3.5 rounded-full font-semibold text-sm transition-all duration-200"
                             style={{
