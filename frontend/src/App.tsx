@@ -2,7 +2,6 @@ import Landing from './pages/Landing'
 import AdminDashboard from './pages/AdminDashboard'
 import DrawEngine from './pages/DrawEngine'
 import ScoreEntry from './pages/ScoreEntry'
-import ScoreEdit from './pages/ScoreEdit'
 import MonthlyDraw from './pages/MonthlyDraw'
 import AdminCharity from './pages/AdminCharity'
 import MemberDashboard from './pages/MumberDashboard'
@@ -35,7 +34,6 @@ const App = () => {
       <Route element={<Register />} path="/register" />
       <Route element={<MemberOnlyRoute><MemberDashboard /></MemberOnlyRoute>} path="/dashboard" />
       <Route element={<ScoreEntry />} path="/score-entry" />
-      <Route element={<ScoreEdit />} path="/score-edit/:id" />
       <Route element={<MonthlyDraw />} path="/draw" />
       <Route element={<AdminOnlyRoute><AdminCharity /></AdminOnlyRoute>} path="/admin/charity" />
       <Route element={<AdminDashboard />} path="/admin" />
