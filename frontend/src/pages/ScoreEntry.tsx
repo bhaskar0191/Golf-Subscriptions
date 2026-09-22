@@ -80,7 +80,6 @@ export default function ScoreEntry() {
             })
             const data = await response.json() as { message?: string }
             if (!response.ok) throw new Error(data.message ?? 'Could not save round')
-            setSavedMessage(data.message ?? 'Score added successfully')
             setStep('saved')
         } catch (error) {
             setSaveError(error instanceof Error ? error.message : 'Could not save round')
